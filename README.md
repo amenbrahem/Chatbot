@@ -1,5 +1,5 @@
 # Chatbot
-download python 
+download python v3,11
 pip install Flask
 pip install googletrans==4.0.0-rc1
 pip install --upgrade googletrans==4.0.0-rc1
