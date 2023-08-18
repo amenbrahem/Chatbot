@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot de Traduction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Chatbot de Traduction</h1>
+        <form method="POST">
+            <label for="text">Texte à traduire :</label>
+            <input type="text" name="text" required><br>
+            <label for="target_lang">Langue cible :</label>
+            <select name="target_lang" required>
+                <option value="fr">Français</option>
+                <option value="es">Espagnol</option>
+                <option value="de">Allemand</option>
+                <option value="ar">Arabe</option>
+                <option value="it">Italien</option>
+                <option value="ja">Japonais</option>
+                <option value="ko">Coréen</option>
+                <option value="ru">Russe</option>
+                <option value="zh-CN">Chinois Simplifié</option>
+                <option value="pt">Portugais</option>
+                <option value="nl">Néerlandais</option>
+                <option value="tr">Turc</option>
+                <option value="pl">Polonais</option>
+                <option value="sv">Suédois</option>
+            </select><br>
+            <button type="submit">Traduire</button>
+        </form>
+        {% if translation %}
+            <p>Traduction : {{ translation }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
